@@ -10,8 +10,8 @@ const App = () => {
     },
     {
       date: new Date(2026, 10, 12),
-      title: 'The Ant-Christ',
-      price: 666
+      title: 'New jeans',
+      price: 99.99
     }
   ]
   
