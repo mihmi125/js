@@ -1,18 +1,19 @@
+import React from 'react';
 import './App.css';
-import Expenses from './components/Expenses';
+import Expenses from './components/expenses/Expenses';
 
 const App = () => {
   const data = [
     {
       date: new Date(2026, 10, 12),
       title: 'New book',
-      price: 30.99
+      price: 30.99,
     },
     {
       date: new Date(2026, 10, 12),
       title: 'New jeans',
-      price: 99.99
-    }
+      price: 99.99,
+    },
   ];
 
   return (
