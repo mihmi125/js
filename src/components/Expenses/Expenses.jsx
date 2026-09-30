@@ -5,15 +5,12 @@ import Card from '../UI/Card'
 import './Expenses.css'
 
 const Expenses = (props) => {
-    // Hetkel valitud aasta (algseisund 2023)
-    const [selectedYear, setSelectedYear] = useState('2023')
+    const [selectedYear, setSelectedYear] = useState('2026')
 
     const changeYearHandler = (year) => {
         console.log('Year data in Expenses.js', year)
         setSelectedYear(year)
     }
-
-    console.log(props);
 
     return (
         <Card className="expenses">
@@ -21,8 +18,12 @@ const Expenses = (props) => {
                 selected={selectedYear}
                 onChangeYear={changeYearHandler}
             />
-            <ExpenseItem data={props.data[0]}/>
-            <ExpenseItem data={props.data[1]}/>
+            {props.data.map((expense) => (
+                <ExpenseItem
+                    key={expense.id}
+                    data={expense}
+                />
+            ))}
         </Card>
     );
 }
