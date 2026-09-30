@@ -5,22 +5,22 @@ import NewExpense from './components/NewExpense/NewExpense';
 
 const DUMMY_EXPENSES = [
   {
-    id: 'e1',
-    date: new Date(2026, 10, 12),
-    title: 'New book',
-    amount: 30.99,
+    id: 'id1',
+    date: new Date(2023, 0, 19),
+    title: 'New Book',
+    amount: 39.99,
   },
   {
-    id: 'e2',
-    date: new Date(2026, 10, 18),
+    id: 'id2',
+    date: new Date(2026, 0, 19),
     title: 'New jeans',
     amount: 99.99,
   },
   {
-    id: 'e3',
-    date: new Date(2026, 10, 25),
+    id: 'id3',
+    date: new Date(2024, 0, 25),
     title: 'New bag',
-    amount: 99.99,
+    amount: 139.99,
   },
 ];
 
@@ -28,6 +28,9 @@ const App = () => {
   const [expenses, setExpenses] = useState(DUMMY_EXPENSES);
 
   const addExpenseHandler = (expense) => {
+    console.log('In App.js');
+    console.log(expense);
+
     setExpenses((previousExpenses) => {
       return [expense, ...previousExpenses];
     });
